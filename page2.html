@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="rental_info">Bérlés információ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="logó.png" alt="Kobi-trans71 Logo" class="logo">
+        <img src="Header.png" alt="Header Image" class="header-image">
+        <div class="language-selector">
+            <label for="languageSwitcher" data-i18n="choose_language">Válasszon nyelvet:</label>
+            <select id="languageSwitcher">
+                <option value="hu">Magyar</option>
+                <option value="ro">Română</option>
+            </select>
+        </div>
+    </header>
+
+    <h1 data-i18n="rental_info">Bérlés információ:</h1>
+    <p data-i18n="rental_price_info">Bérlés napi ára:</p>
+    <p data-i18n="small_car_price">Személy autók esetében: 8000 HUF</p>
+    <p data-i18n="minivan_price">9 személyes kisbusz esetében: 28000 HUF</p>
+    <p data-i18n="deposit">Kaucó összege: 60000 HUF</p>
+
+    <div class="road-container">
+        <div class="road"></div>
+        <div class="truck">
+            <div class="truck-cabin"></div>
+            <span class="truck-text" data-i18n="reliable">Megbízható</span>
+        </div>
+        <div class="truck">
+            <div class="truck-cabin"></div>
+            <span class="truck-text" data-i18n="affordable">Megfizethető</span>
+        </div>
+        <div class="truck">
+            <div class="truck-cabin"></div>
+            <span class="truck-text" data-i18n="book">Foglalok</span>
+        </div>
+    </div>
+
+    <script src="language.js" defer></script>
+</body>
+</html>

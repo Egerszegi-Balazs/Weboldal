@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="fleet">A flotta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="logó.png" alt="Kobi-trans71 Logo" class="logo">
+        <img src="Header.png" alt="Header Image" class="header-image">
+        <div class="language-selector">
+            <label for="languageSwitcher" data-i18n="choose_language">Válasszon nyelvet:</label>
+            <select id="languageSwitcher">
+                <option value="hu">Magyar</option>
+                <option value="ro">Română</option>
+                <option value="ro">Україна</option>
+                <option value="ro">slovenský</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <h1 data-i18n="fleet">A flotta:</h1>
+
+        <section class="fleet-section">
+            <div class="fleet-category">
+                <h2 data-i18n="passenger_cars">Személyautók</h2>
+                <div class="fleet-grid">
+                    <div class="fleet-item">
+                        <img src="small_car_1.jpg" alt="Small Car 1">
+                        <h3 data-i18n="renault_19">Renault 19</h3>
+                        <p data-i18n="renault_19_desc">A megbízható munkás autó.</p>
+                    </div>
+                    <div class="fleet-item">
+                        <img src="small_car_2.jpg" alt="Small Car 2">
+                        <h3 data-i18n="vw_passat">Volkswagen Passat B5</h3>
+                        <p data-i18n="vw_passat_desc">Alacsony fogyasztású, megbízható kaszni.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fleet-category">
+                <h2 data-i18n="minivans">Kisbuszok</h2>
+                <div class="fleet-grid">
+                    <div class="fleet-item">
+                        <img src="minivan_1.jpg" alt="Minivan 1">
+                        <h3 data-i18n="opel_vivaro">Opel Vivaro</h3>
+                        <p data-i18n="opel_vivaro_desc">Tágas utastér, tökéletes nagyobb csoportok számára.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="road-container">
+        <div class="road"></div>
+        <div class="truck">
+            <div class="truck-cabin"></div>
+            <span class="truck-text" data-i18n="reliable">Megbízható</span>
+        </div>
+        <div class="truck">
+            <div class="truck-cabin"></div>
+            <span class="truck-text" data-i18n="affordable">Megfizethető</span>
+        </div>
+        <div class="truck">
+            <div class="truck-cabin"></div>
+            <span class="truck-text" data-i18n="book">Foglalok</span>
+        </div>
+    </div>
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Full Image">
+    </div>
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        document.querySelectorAll('.fleet-item img').forEach(img => {
+            img.addEventListener('click', () => {
+                openModal(img.src);
+            });
+        });
+    </script>
+    <script src="language.js" defer></script>
+</body>
+</html>

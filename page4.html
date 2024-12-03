@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foglalás:</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .radio-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; /* Add space between radio button and label */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="logó.png" alt="Kobi-trans71 Logo" class="logo">
+        <img src="Header.png" alt="Header Image">
+        <div class="language-selector">
+            <label for="languageSwitcher">Válasszon nyelvet:</label>
+            <select id="languageSwitcher">
+                <option value="hu">Magyar</option>
+                <option value="ro">Română</option>
+                <option value="ro">Україна</option>
+                <option value="ro">slovenský</option>
+            </select>
+        </div>
+    </header>
+
+    <h1 data-i18n="booking">Foglalás</h1>
+    <form action="send_email.php" method="POST" class="reservation-form">
+        <label for="name" data-i18n="name">Név:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email" data-i18n="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mobile" data-i18n="phone">Telefonszám:</label>
+        <input type="tel" id="mobile" name="mobile" required>
+
+        <label for="car_type" data-i18n="car_type">Autó típus:</label><br>
+        <div class="radio-group">
+            <input type="radio" id="small_car" name="car_type" value="Small Car" required>
+            <label for="small_car" data-i18n="small_car">Személyautó</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="minivan" name="car_type" value="Minivan" required>
+            <label for="minivan" data-i18n="minivan">Kisbusz</label>
+        </div>
+
+        <label for="start_date" data-i18n="rental_start_date">Bérlés kezdő dátum:</label><br>
+        <input type="date" id="start_date" name="start_date" required><br><br>
+
+        <label for="end_date" data-i18n="rental_end_date">Bérlés végső dátum:</label><br>
+        <input type="date" id="end_date" name="end_date" required><br><br>
+
+        <label for="special_needs" data-i18n="special_requirements">Külön igény:</label><br>
+        <textarea id="special_needs" name="special_needs"></textarea><br><br>
+
+        <input type="submit" value="Foglalás leadása" data-i18n="submit_booking">
+    </form>
+
+    <script src="language.js" defer></script>
+</body>
+</html>

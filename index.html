@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="homepage_title">My First Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="Header.png" alt="Header Image">
+        <img src="logó.png" alt="Kobi-trans71 Logo" class="logo">
+        <div class="language-selector">
+            <label for="languageSwitcher" data-i18n="choose_language">Válasszon nyelvet:</label>
+            <select id="languageSwitcher">
+                <option value="hu">Magyar</option>
+                <option value="ro">Română</option>
+                <option value="ro">Україна</option>
+                <option value="ro">slovenský</option>
+            </select>
+        </div>
+    </header>
+
+    <section class="button-container">
+        <a href="page1.html" class="button" data-i18n="contact">Kapcsolat</a>
+        <a href="page2.html" class="button" data-i18n="rental_info">Bérlés információ</a>
+        <a href="page3.html" class="button" data-i18n="fleet">A flotta</a>
+        <a href="page4.html" class="button" data-i18n="booking">Foglalás</a>
+    </section>
+
+    <h1 data-i18n="welcome_message">A kisvállalkozás ahol megtalálod a bérautódat!</h1>
+
+    <div class="road-container">
+        <div class="road"></div>
+        <div class="truck">
+            <div class="truck-cabin"></div>
+            <span class="truck-text" data-i18n="book">Foglalok</span>
+        </div>
+        <div class="truck">
+            <div class="truck-cabin"></div>
+            <span class="truck-text" data-i18n="affordable">Megfizethető</span>
+        </div>
+        <div class="truck">
+            <div class="truck-cabin"></div>
+            <span class="truck-text" data-i18n="reliable">Megbízható</span>
+        </div>
+    </div>
+
+    <script src="language.js" defer></script>
+</body>
+</html>

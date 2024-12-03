@@ -1,0 +1,365 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #477864;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Needed to position the road at the bottom */
+}
+
+/* Header Styles */
+.header {
+    position: relative;
+}
+
+.header img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    display: block;
+}
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #243D33;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.language-selector label,
+.language-selector select {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+/* Logo Styles */
+.header .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-height: 80px;
+    width: auto;
+}
+/* Radio Button Group Styles */
+.radio-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Add space between radio button and label */
+    margin-bottom: 10px;
+}
+
+.radio-group label {
+    margin-left: 10px;
+}
+/* Button Container Styles */
+.button-container {
+    display: flex;
+    justify-content: space-around; /* More balanced spacing for buttons */
+    padding: 20px;
+    margin: 0 20px;
+}
+
+.button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #243D33;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button-container a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.button-container a:active {
+    animation: shake 0.3s ease;
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Main Content Styles */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Fleet Section Styles */
+.fleet-section {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fleet-category {
+    margin-bottom: 40px;
+}
+
+.fleet-category h2 {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.fleet-item {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fleet-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.fleet-item:hover img {
+    transform: scale(1.05);
+}
+
+.fleet-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.fleet-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Fullscreen Modal Styles */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.image-modal .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 2em;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Reservation Form Styles */
+.reservation-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reservation-form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.reservation-form input,
+.reservation-form textarea,
+.reservation-form button {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px 0;
+}
+
+.reservation-form input,
+.reservation-form textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reservation-form button {
+    background-color: #243D33;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.reservation-form button:hover {
+    background-color: #0056b3;
+}
+
+.reservation-form button:active {
+    animation: shake 0.3s ease;
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Heading Styles */
+h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .button-container a {
+        margin: 10px 0;
+    }
+
+    .reservation-form {
+        width: 90%;
+    }
+} 
+
+/* Additional Utility Styles */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* Road Animation Styles */
+.road-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.road {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background: repeating-linear-gradient(90deg, #555 0, #555 30px, #fff 30px, #fff 60px);
+    top: 40px;
+}
+
+.truck {
+    position: absolute;
+    bottom: 10px;
+    left: -150px;
+    width: 100px;
+    height: 50px;
+    background: #000000; /* Black truck */
+    border-radius: 5px;
+    border: 3px solid #000;
+    animation: drive 60s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.truck:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.truck:nth-child(2) {
+    animation-delay: 20s;
+}
+
+.truck:nth-child(3) {
+    animation-delay: 40s;
+}
+
+.truck::before, .truck::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border-radius: 50%;
+}
+
+.truck::before {
+    left: 10px;
+}
+
+.truck::after {
+    right: 10px;
+}
+
+/* Cabin for the truck */
+.truck-cabin {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background: transparent; /* Remove white background */
+    border: 2px solid #000;
+    border-radius: 3px;
+}
+
+@keyframes drive {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 110%;
+    }
+}
